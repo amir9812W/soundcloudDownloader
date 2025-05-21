@@ -19,10 +19,6 @@ status_label = None
 track_playList = "Track"
 download_active = False
 
-def sanitize_filename(filename):
-    """Remove invalid characters from filenames"""
-    return "".join(c for c in filename if c.isalnum() or c in (' ', '-', '_'))
-
 def update_progress(progress_value, message=""):
     progress.set(progress_value)
     if status_label:
